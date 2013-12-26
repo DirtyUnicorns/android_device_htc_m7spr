@@ -1,0 +1,30 @@
+# system.prop for m7spr
+#
+
+rild.libargs=-d /dev/smd0
+rild.libpath=/system/lib/libril-qc-qmi-1.so
+persist.radio.snapshot_enabled=1
+persist.radio.snapshot_timer=2
+ro.telephony.default_network=10
+telephony.lteOnCdmaDevice=1
+persist.radio.apm_sim_not_pwdn=1
+ro.telephony.call_ring.multiple=0
+ro.cdma.home.operator.numeric=310120
+ro.cdma.home.operator.alpha=Sprint
+gsm.sim.operator.alpha=Sprint
+gsm.sim.operator.numeric=310120
+gsm.sim.operator.iso-country=us
+gsm.operator.alpha=Sprint
+gsm.operator.numeric=310120
+gsm.operator.iso-country=us
+persist.radio.use_nv_for_ehrpd=true
+persist.radio.mode_pref_nv10=1
+persist.radio.always_send_plmn=true
+
+# hardware info
+ro.device.chipset=Qualcomm SND600
+ro.device.cpu=1.7 GHz quad-core
+ro.device.gpu=Qualcomm Adreno 320
+ro.device.rear_cam= HTC UltraPixel (4mp) Camera
+ro.device.front_cam=2.1 MP
+ro.device.screen_res=4.7 inch 1080p resolution

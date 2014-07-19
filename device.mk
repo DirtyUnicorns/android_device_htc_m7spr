@@ -26,9 +26,6 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/m7-common/overlay-cdma
 # Inherit from m7-common
 $(call inherit-product, device/htc/m7-common/m7-common.mk)
 
-PRODUCT_COPY_FILES += \
-    vendor/du/bootanimations/bootanimation_1080_1920.zip:system/media/bootanimation.zip
-
 #OmniTorch
  PRODUCT_PACKAGES += \
         OmniTorch

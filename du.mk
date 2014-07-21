@@ -12,15 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#
-# This file is the build configuration for a full Android
-# build for maguro hardware. This cleanly combines a set of
-# device-specific aspects (drivers) with a device-agnostic
-# product configuration (apps). Except for a few implementation
-# details, it only fundamentally contains two inherit-product
-# lines, full and maguro, hence its name.
-#
-
 # Get the long list of APNs
 $(call inherit-product, vendor/du/config/cdma.mk)
 
@@ -30,12 +21,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/du/config/common.mk)
 
-# Inherit from m7ul device
+# Inherit from m7spr device
 $(call inherit-product, device/htc/m7spr/device.mk)
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := du_m7spr
 PRODUCT_DEVICE := m7spr
 PRODUCT_BRAND := htc
-PRODUCT_MANUFACTURER := htc
+PRODUCT_MANUFACTURER := HTC
 PRODUCT_MODEL := One
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=sprint_wwe \
+    BUILD_FINGERPRINT="htc/sprint_wwe/m7wls:4.4.2/KOT49H/303687.4:user/release-keys" \
+    PRIVATE_BUILD_DESC="4.06.651.4 CL303687 release-keys"
